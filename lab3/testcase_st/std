@@ -1,0 +1,41 @@
+ST table
+A : {
+  + -> + 
+  - -> - 
+}
+E : {
+  ( -> T E' 
+  identifier -> T E' 
+}
+E' : {
+  ) ->  
+  + -> A T E' 
+  - -> A T E' 
+  end ->  
+}
+F : {
+  ( -> ( E ) 
+  identifier -> i 
+}
+M : {
+  * -> * 
+  / -> / 
+}
+S : {
+  identifier -> V = E 
+}
+T : {
+  ( -> F T' 
+  identifier -> F T' 
+}
+T' : {
+  ) ->  
+  * -> M F T' 
+  + ->  
+  - ->  
+  / -> M F T' 
+  end ->  
+}
+V : {
+  identifier -> i 
+}

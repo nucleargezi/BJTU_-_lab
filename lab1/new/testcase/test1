@@ -1,0 +1,9 @@
+void foo() {
+    double x = 3.14;
+    int y = 42;
+    if (x > y) {
+        y += 1;
+    } else {
+        y -= 1;
+    }
+}

@@ -1,0 +1,114 @@
+action st:
+closure: 0:
+identifier -> shift 3
+closure: 1:
+end -> acc 
+closure: 2:
+= -> shift 4
+closure: 3:
+= -> reduce i 
+closure: 4:
+identifier -> shift 9
+( -> shift 5
+closure: 5:
+identifier -> shift 9
+( -> shift 5
+closure: 6:
++ -> shift 11
+- -> shift 12
+end -> reduce V = E 
+closure: 7:
+) -> reduce F 
++ -> reduce F 
+- -> reduce F 
+* -> reduce F 
+/ -> reduce F 
+end -> reduce F 
+closure: 8:
+) -> reduce T 
++ -> reduce T 
+- -> reduce T 
+* -> shift 13
+/ -> shift 14
+end -> reduce T 
+closure: 9:
+) -> reduce i 
++ -> reduce i 
+- -> reduce i 
+* -> reduce i 
+/ -> reduce i 
+end -> reduce i 
+closure: 10:
+) -> shift 15
++ -> shift 11
+- -> shift 12
+closure: 11:
+identifier -> shift 9
+( -> shift 5
+closure: 12:
+identifier -> shift 9
+( -> shift 5
+closure: 13:
+identifier -> shift 9
+( -> shift 5
+closure: 14:
+identifier -> shift 9
+( -> shift 5
+closure: 15:
+) -> reduce ( E ) 
++ -> reduce ( E ) 
+- -> reduce ( E ) 
+* -> reduce ( E ) 
+/ -> reduce ( E ) 
+end -> reduce ( E ) 
+closure: 16:
+) -> reduce E + T 
++ -> reduce E + T 
+- -> reduce E + T 
+* -> shift 13
+/ -> shift 14
+end -> reduce E + T 
+closure: 17:
+) -> reduce E - T 
++ -> reduce E - T 
+- -> reduce E - T 
+* -> shift 13
+/ -> shift 14
+end -> reduce E - T 
+closure: 18:
+) -> reduce T * F 
++ -> reduce T * F 
+- -> reduce T * F 
+* -> reduce T * F 
+/ -> reduce T * F 
+end -> reduce T * F 
+closure: 19:
+) -> reduce T / F 
++ -> reduce T / F 
+- -> reduce T / F 
+* -> reduce T / F 
+/ -> reduce T / F 
+end -> reduce T / F 
+
+goto st:
+closure: 0:
+ S -> 1
+ V -> 2
+closure: 4:
+ E -> 6
+ F -> 7
+ T -> 8
+closure: 5:
+ E -> 10
+ F -> 7
+ T -> 8
+closure: 11:
+ F -> 7
+ T -> 16
+closure: 12:
+ F -> 7
+ T -> 17
+closure: 13:
+ F -> 18
+closure: 14:
+ F -> 19

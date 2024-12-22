@@ -1,0 +1,131 @@
+
+Ciallo:
+CLosure stk: 
+0 
+s stk: 
+end # 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: shift, push state 3 and symbol a
+
+Ciallo:
+CLosure stk: 
+0 3 
+s stk: 
+end # identifier a 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: reduce byu production V -> i 
+
+Ciallo:
+CLosure stk: 
+0 2 
+s stk: 
+end # identifier a 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: shift, push state 4 and symbol =
+
+Ciallo:
+CLosure stk: 
+0 2 4 
+s stk: 
+end # identifier a = = 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: shift, push state 9 and symbol b
+
+Ciallo:
+CLosure stk: 
+0 2 4 9 
+s stk: 
+end # identifier a = = identifier b 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: reduce byu production F -> i 
+
+Ciallo:
+CLosure stk: 
+0 2 4 7 
+s stk: 
+end # identifier a = = identifier b 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: reduce byu production T -> F 
+
+Ciallo:
+CLosure stk: 
+0 2 4 8 
+s stk: 
+end # identifier a = = identifier b 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: reduce byu production E -> T 
+
+Ciallo:
+CLosure stk: 
+0 2 4 6 
+s stk: 
+end # identifier a = = identifier b 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: shift, push state 11 and symbol +
+
+Ciallo:
+CLosure stk: 
+0 2 4 6 11 
+s stk: 
+end # identifier a = = identifier b + + 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: shift, push state 9 and symbol c
+
+Ciallo:
+CLosure stk: 
+0 2 4 6 11 9 
+s stk: 
+end # identifier a = = identifier b + + identifier c 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: reduce byu production F -> i 
+
+Ciallo:
+CLosure stk: 
+0 2 4 6 11 7 
+s stk: 
+end # identifier a = = identifier b + + identifier c 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: reduce byu production T -> F 
+
+Ciallo:
+CLosure stk: 
+0 2 4 6 11 16 
+s stk: 
+end # identifier a = = identifier b + + identifier c 
+tokens: 
+a = b + c / # 
+Ciallo~
+action: shift, push state 14 and symbol /
+
+Ciallo:
+CLosure stk: 
+0 2 4 6 11 16 14 
+s stk: 
+end # identifier a = = identifier b + + identifier c / / 
+tokens: 
+a = b + c / # 
+Ciallo~
+Zako♡~ unexpected token: # at 6
+WA

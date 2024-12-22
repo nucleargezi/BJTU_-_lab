@@ -1,0 +1,37 @@
+First : 
+A    : { + - }
+E    : { identifier ( }
+E'   : { + - ε }
+F    : { identifier ( }
+M    : { * / }
+S    : { identifier }
+T    : { identifier ( }
+T'   : { * / ε }
+V    : { identifier }
+
+Ciallo～(∠・ω< )⌒★
+
+Follow : 
+A    : { identifier ( }
+E    : { ) end }
+E'   : { ) end }
+F    : { ) + - * / end }
+M    : { identifier ( }
+S    : { end }
+T    : { ) + - end }
+T'   : { ) + - end }
+V    : { = }
+
+Ciallo～(∠・ω< )⌒★
+
+First_vt : 
+E    : { identifier ( + - * / }
+F    : { identifier ( }
+T    : { identifier ( * / }
+
+Ciallo～(∠・ω< )⌒★
+
+Last_vt : 
+E    : { identifier ) + - * / }
+F    : { identifier ) }
+T    : { identifier ) * / }
